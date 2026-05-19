@@ -15,10 +15,10 @@ public interface ProductoRepository extends MongoRepository<Producto, String> {
     // ==========================
     // BUSCAR POR CATEGORIA
     // ==========================
-    List<Producto> findByCategoria(String categoria);
+    List<Producto> findByCategoriaIgnoreCase(String categoria);
 
     // ==========================
     // BUSCAR POR ESTADO
     // ==========================
-    List<Producto> findByEstado(String estado);
+    List<Producto> findByEstadoIgnoreCase(String estado);
 }
