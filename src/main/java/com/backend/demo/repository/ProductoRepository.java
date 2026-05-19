@@ -7,12 +7,18 @@ import java.util.List;
 
 public interface ProductoRepository extends MongoRepository<Producto, String> {
 
+    // ==========================
     // BUSCAR POR NOMBRE
+    // ==========================
     List<Producto> findByNombreContainingIgnoreCase(String nombre);
 
-    // FILTRAR POR CATEGORÍA
-    List<Producto> findByCategoriaIgnoreCase(String categoria);
+    // ==========================
+    // BUSCAR POR CATEGORIA
+    // ==========================
+    List<Producto> findByCategoria(String categoria);
 
-    // FILTRAR POR ESTADO
-    List<Producto> findByEstadoIgnoreCase(String estado);
+    // ==========================
+    // BUSCAR POR ESTADO
+    // ==========================
+    List<Producto> findByEstado(String estado);
 }
